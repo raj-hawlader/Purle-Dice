@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import CustomParts from './components/CustomParts.'
+import Products from './components/Products'
 
 const page = () => {
   return (
@@ -9,6 +10,7 @@ const page = () => {
       <Header/> 
       <Hero/>
       <CustomParts/>
+      <Products/>
     </>
   )
 }

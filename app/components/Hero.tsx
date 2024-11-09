@@ -5,7 +5,7 @@ import heroImage from '../../app/assets/image (1).png';
 
 const Hero = () => {
   return (
-    <div className='container mx-auto flex justify-center items-center h-full px-4 md:px-[72px] pt-5'>
+    <div className='container mx-auto flex justify-center items-center h-full px-4 md:px-[38px] pt-5'>
       <div className='flex flex-col items-center w-full'>
 
         {/* hero image */}

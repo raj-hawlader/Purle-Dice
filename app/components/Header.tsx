@@ -17,7 +17,7 @@ const Header = () => {
       <header>
         {/* 1st part */}
         <div className="bg-[#0363CA] text-white w-full h-[30px] p-2 md:p-0">
-            <div className="container mx-auto flex justify-between items-center md:px-[72px] h-full">
+            <div className="container mx-auto flex justify-between items-center md:px-[38px] h-full">
                 <div className="flex items-center">
                     <h3 className="text-xs md:text-sm font-Inter">
                         Hotline:
@@ -38,7 +38,7 @@ const Header = () => {
 
         {/* 2nd part */}
         <div className="w-full h-20 bg-white shadow-md">
-            <div className="container mx-auto flex justify-between items-center h-full px-4 md:px-[72px]">
+            <div className="container mx-auto flex justify-between items-center h-full px-4 md:px-[38px]">
                 <div>
                     <Image src={logo} alt="Company Logo" width={173} height={50} />
                 </div>
