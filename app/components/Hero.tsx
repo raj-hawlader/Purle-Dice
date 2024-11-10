@@ -15,7 +15,7 @@ const PrevArrow = (props: any) => {
   return (
     <button
       onClick={onClick}
-      className="absolute left-[-40px] top-[50%] transform -translate-y-1/2 text-2xl text-[#BEBEBE] hover:text-[#0487E2]">
+      className="absolute left-[-40px] top-[50%] transform -translate-y-1/2 text-2xl text-[#BEBEBE] hover:text-[#226dc4]">
       <FaChevronLeft />
     </button>
   );
@@ -26,7 +26,7 @@ const NextArrow = (props: any) => {
   return (
     <button
       onClick={onClick}
-      className="absolute right-[-40px] top-[50%] transform -translate-y-1/2 text-2xl text-[#BEBEBE] hover:text-[#0487E2]">
+      className="absolute right-[-40px] top-[50%] transform -translate-y-1/2 text-2xl text-[#BEBEBE] hover:text-[#226dc4]">
       <FaChevronRight />
     </button>
   );
