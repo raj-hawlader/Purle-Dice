@@ -75,31 +75,34 @@ const Products = () => {
   };
 
   return (
-    <div className="w-full bg-custom-bg pt-9 pb-9 relative">
-      <div className="container mx-auto pb-6 px-5 md:px-[38px] flex items-center justify-between">
-        <h2 className="text-2xl text-[#0487E2] font-bold">Featured Products</h2>
-        
-        <div className="flex gap-4">
-          <button
-            className="text-[#BEBEBE] p-2 rounded-full hover:text-[#0487E2]"
-            onClick={() => sliderRef.current?.slickPrev()}>
-            <FaChevronLeft className="text-xl" />
-          </button>
+    <div className="w-full">
+      <div className="container mx-auto max-w-[1440px] bg-custom-bg flex flex-col justify-center gap-12 h-[548px] px-5 md:px-[38px]">
+
+        <div className="flex items-center justify-between">
+          <h2 className="text-2xl text-[#0487E2] font-bold">Featured Products</h2>
           
-          <button
-            className="text-[#BEBEBE] p-2 rounded-full hover:text-[#0487E2]"
-            onClick={() => sliderRef.current?.slickNext()}>
-            <FaChevronRight className="text-xl" />
-          </button>
+          <div className="flex gap-4">
+            <button
+              className="text-[#BEBEBE] p-2 rounded-full hover:text-[#0487E2]"
+              onClick={() => sliderRef.current?.slickPrev()}>
+              <FaChevronLeft className="text-xl" />
+            </button>
+            
+            <button
+              className="text-[#BEBEBE] p-2 rounded-full hover:text-[#0487E2]"
+              onClick={() => sliderRef.current?.slickNext()}>
+              <FaChevronRight className="text-xl" />
+            </button>
+          </div>
         </div>
-      </div>
-      
-      <div className=" pl-4 sm:pl-8 lg:pl-[72px] text-center overflow-hidden flex flex-col gap-2 relative">
-        <Slider ref={sliderRef} {...settings}>
-          {products.map((product, index) => (
-            <ProductCard key={index} image={product.image} title={product.title} price={product.price} />
-          ))}
-        </Slider>
+        
+        <div className="overflow-hidden">
+          <Slider ref={sliderRef} {...settings}>
+            {products.map((product, index) => (
+              <ProductCard key={index} image={product.image} title={product.title} price={product.price} />
+            ))}
+          </Slider>
+        </div>
       </div>
     </div>
   );
