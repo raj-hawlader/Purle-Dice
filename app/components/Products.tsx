@@ -49,9 +49,9 @@ const ProductCard = ({ image, title, price }: { image: string; title: string; pr
   <div className="bg-white flex flex-col items-center justify-between p-3 h-[378px] w-[240px] mx-2">
     <Image src={image} alt={title} width={200} height={200} />
     <div className="space-y-1">
-      <h2 className="text-[#0487E2] text-center">{title}</h2>
-      <p className="text-[#0487E2] text-xl">{price}</p>
-      <button className="bg-[#0487E2] py-2 px-11 text-sm text-white rounded-sm font-semibold hover:bg-[#226dc4]">
+      <h2 className="text-[#0487E2] text-center font-exo font-semibold text-base">{title}</h2>
+      <p className="text-[#0487E2] text-xl font-exo">{price}</p>
+      <button className="bg-[#0487E2] py-3 w-[216px] text-sm text-white rounded-sm font-bold hover:bg-[#226dc4]">
         Add to Cart
       </button>
     </div>
