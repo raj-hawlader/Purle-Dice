@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Purple Dice Project
 
-## Getting Started
+## Setup Instructions
 
-First, run the development server:
+To get started with this project, follow the instructions below to install dependencies and run the project:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 1. Clone the repository:
+``bash
+git clone https://github.com/raj-hawlader/Purle-Dice
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Navigate to the project directory:
+`cd purple-dice`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Install dependencies:
+`npm install`
+### 4. Run the project:
+`npm run dev`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 5. Build the project for production:
+`npm run build`
 
-## Learn More
+### 6. Start the production server:
+`npm start`
 
-To learn more about Next.js, take a look at the following resources:
+## Approach Explanation-
+The goal of this project was to create a fully responsive web application for Purple Dice using Next.js, Tailwind CSS, and TypeScript. The application is optimized for both desktop and mobile/tablet devices to ensure a seamless user experience across various screen sizes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Key Features:
+`Responsive Design`: The project is designed to be fully responsive, adjusting gracefully on mobile and tablet devices.
+`Next.js`: Used for its server-side rendering capabilities and for creating a fast, optimized React application.
+`Tailwind CSS`: Utilized for utility-first CSS, allowing for easy styling and customization.
+`TypeScript`: Provides static typing for improved developer productivity and code quality.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# https://github.com/raj-hawlader/Purle-Dice
