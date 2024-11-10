@@ -19,14 +19,14 @@ const Header = () => {
         <div className="bg-[#0363CA] text-white w-full h-[30px] p-2 md:p-0">
             <div className="container mx-auto flex justify-between items-center md:px-[38px] h-full">
                 <div className="flex items-center">
-                    <h3 className="text-xs md:text-sm font-Inter">
+                    <h3 className="text-xs md:text-sm font-inter">
                         Hotline:
                         <span className="font-semibold pl-1">+0186-1123325</span>
                     </h3>
                 </div>
 
                 <div className="flex items-center gap-4 md:gap-12">
-                    <h3 className="text-xs md:text-sm">Contact Us</h3>
+                    <h3 className="text-xs md:text-sm font-inter">Contact Us</h3>
                     <div className="flex gap-2">
                         <IoLogoFacebook className="w-4 h-4 md:w-5 md:h-5 cursor-pointer" />
                         <FaInstagram className="w-4 h-4 md:w-5 md:h-5 cursor-pointer" />
@@ -51,7 +51,7 @@ const Header = () => {
 
                 {/* for mobile */}
                 <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
-                    <div className="text-sm flex flex-col items-center space-y-4">
+                    <div className="text-sm flex flex-col items-center space-y-4 font-exo">
                         <a href="#" className="hover:text-[#0487E2] font-semibold">Home</a>
                         <a href="#" className="hover:text-[#0487E2]">Shop</a>
                         <a href="#" className="hover:text-[#0487E2]">Products</a>
@@ -61,7 +61,7 @@ const Header = () => {
                 </div>
 
                 {/* for desktop and tablet */}
-                <div className="hidden md:flex gap-8 items-center text-[#263746] text-sm">
+                <div className="hidden md:flex gap-8 items-center text-[#263746] text-sm font-exo">
                     <a href="#" className="hover:text-[#0363CA]">Home</a>
                     <a href="#" className="hover:text-[#0363CA]">Shop</a>
                     <a href="#" className="hover:text-[#0363CA]">Products</a>
@@ -73,7 +73,7 @@ const Header = () => {
                     <input
                         type="text"
                         placeholder="Search Products"
-                        className="outline-none text-sm px-4 w-full md:w-[416px] h-12"
+                        className="outline-none text-sm px-4 w-full md:w-[416px] h-12 font-exo"
                     />
                     <button className="absolute right-0 flex items-center justify-center bg-[#0487E2] h-12 w-12 rounded-r-md text-white cursor-pointer">
                         <FaSearch />

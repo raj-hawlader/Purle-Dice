@@ -10,6 +10,7 @@ import img3 from '../../app/assets/image (1).png';
 import img4 from '../../app/assets/image (1).png';
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
+
 const PrevArrow = (props: any) => {
   const { onClick } = props;
   return (
