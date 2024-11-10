@@ -49,9 +49,11 @@ const ProductCard = ({ image, title, price }: { image: string; title: string; pr
   <div className="bg-white flex flex-col items-center justify-between p-3 h-[378px] w-[240px] mx-2">
     <Image src={image} alt={title} width={200} height={200} />
     <div className="space-y-1">
-      <h2 className="text-[#0487E2]">{title}</h2>
+      <h2 className="text-[#0487E2] text-center">{title}</h2>
       <p className="text-[#0487E2] text-xl">{price}</p>
-      <button className="bg-[#0487E2] py-2 px-11 text-sm text-white rounded-sm font-semibold hover:bg-[#226dc4]">Add to Cart</button>
+      <button className="bg-[#0487E2] py-2 px-11 text-sm text-white rounded-sm font-semibold hover:bg-[#226dc4]">
+        Add to Cart
+      </button>
     </div>
   </div>
 );
@@ -65,14 +67,19 @@ const Products = () => {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 2,
+    responsive: [
+      { breakpoint: 1024, settings: { slidesToShow: 3, slidesToScroll: 2 } },
+      { breakpoint: 768, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+      { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+    ],
   };
 
   return (
-    <div className="w-full h-[548px] bg-custom-bg pt-9 relative">
-      <div className="container mx-auto pb-9 px-4 md:px-[38px] flex items-center justify-between">
+    <div className="w-full bg-custom-bg pt-9 pb-9 relative">
+      <div className="container mx-auto pb-6 px-5 md:px-[38px] flex items-center justify-between">
         <h2 className="text-2xl text-[#0487E2] font-bold">Featured Products</h2>
         
-        <div className="flex gap-6">
+        <div className="flex gap-4">
           <button
             className="text-[#BEBEBE] p-2 rounded-full hover:text-[#0487E2]"
             onClick={() => sliderRef.current?.slickPrev()}>
@@ -87,7 +94,7 @@ const Products = () => {
         </div>
       </div>
       
-      <div className="pl-4 sm:pl-8 lg:pl-[72px] text-center overflow-hidden flex flex-col gap-2 relative">
+      <div className=" pl-4 sm:pl-8 lg:pl-[72px] text-center overflow-hidden flex flex-col gap-2 relative">
         <Slider ref={sliderRef} {...settings}>
           {products.map((product, index) => (
             <ProductCard key={index} image={product.image} title={product.title} price={product.price} />
