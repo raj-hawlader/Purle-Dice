@@ -10,6 +10,7 @@ import img3 from '../../app/assets/image (9).png';
 import img4 from '../../app/assets/image (4).png';
 import img5 from '../../app/assets/image (5).png';
 import img6 from '../../app/assets/image (6).png';
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 
 const products = [
   {
@@ -45,38 +46,49 @@ const products = [
 ];
 
 const ProductCard = ({ image, title, price }: { image: string; title: string; price: string }) => (
-  <div className="bg-white flex flex-col items-center h-[378px] w-[240px] mx-2">
+  <div className="bg-white flex flex-col items-center justify-between p-3 h-[378px] w-[240px] mx-2">
     <Image src={image} alt={title} width={200} height={200} />
-    <h2 className="text-blue-500">{title}</h2>
-    <p>{price}</p>
-    <button className="bg-blue-500 py-2 px-11 text-sm text-white rounded-sm">Add to Cart</button>
+    <div className="space-y-1">
+      <h2 className="text-[#0487E2]">{title}</h2>
+      <p className="text-[#0487E2] text-xl">{price}</p>
+      <button className="bg-[#0487E2] py-2 px-11 text-sm text-white rounded-sm font-semibold hover:bg-[#226dc4]">Add to Cart</button>
+    </div>
   </div>
 );
 
 const Products = () => {
+  const sliderRef = React.useRef<Slider>(null);
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
-    slidesToScroll: 1,
-    prevArrow: (
-      <div className="absolute left-[-40px] top-[50%] transform -translate-y-[50%] text-white text-2xl cursor-pointer">
-        &#8592;
-      </div>
-    ),
-    nextArrow: (
-      <div className="absolute right-[-40px] top-[50%] transform -translate-y-[50%] text-white text-2xl cursor-pointer">
-        &#8594;
-      </div>
-    ),
+    slidesToScroll: 2,
   };
 
   return (
     <div className="w-full h-[548px] bg-custom-bg pt-9 relative">
-      <h2 className="container mx-auto pb-9 px-4 md:px-[38px] text-2xl text-[#0487E2] font-bold">Featured Products</h2>
-      <div className="pl-4 sm:pl-8 lg:pl-[72px] overflow-hidden flex flex-col gap-2 relative">
-        <Slider {...settings}>
+      <div className="container mx-auto pb-9 px-4 md:px-[38px] flex items-center justify-between">
+        <h2 className="text-2xl text-[#0487E2] font-bold">Featured Products</h2>
+        
+        <div className="flex gap-6">
+          <button
+            className="text-[#BEBEBE] p-2 rounded-full hover:text-[#0487E2]"
+            onClick={() => sliderRef.current?.slickPrev()}>
+            <FaChevronLeft className="text-xl" />
+          </button>
+          
+          <button
+            className="text-[#BEBEBE] p-2 rounded-full hover:text-[#0487E2]"
+            onClick={() => sliderRef.current?.slickNext()}>
+            <FaChevronRight className="text-xl" />
+          </button>
+        </div>
+      </div>
+      
+      <div className="pl-4 sm:pl-8 lg:pl-[72px] text-center overflow-hidden flex flex-col gap-2 relative">
+        <Slider ref={sliderRef} {...settings}>
           {products.map((product, index) => (
             <ProductCard key={index} image={product.image} title={product.title} price={product.price} />
           ))}
