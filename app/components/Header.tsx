@@ -32,38 +32,39 @@ const Header = () => {
       </div>
 
       {/* 2nd part */}
-      <div className="w-full h-20 flex items-center justify-between container mx-auto px-4 md:px-[38px] relative">
-        <div className="hidden md:block">
+      <div className="w-full h-20 flex items-center justify-between container mx-auto px-4 md:px-8 relative">
+
+        <div className="flex items-center">
           <Image src={logo} alt="Company Logo" width={173} height={50} />
         </div>
 
-        <div className="flex items-center justify-between w-full px-2 md:w-auto">
-            <button
-                className="md:hidden text-[#0487E2] p-5"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <IoMdMenu className="text-2xl"/>
+
+
+          <button
+            className="md:hidden text-[#0487E2] p-5"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <IoMdMenu className="text-2xl" />
+          </button>
+
+          <div className="hidden md:flex md:gap-6 items-center text-[#263746] text-sm font-exo">
+            <a href="#" className="hover:text-[#0363CA]">Home</a>
+            <a href="#" className="hover:text-[#0363CA]">Shop</a>
+            <a href="#" className="hover:text-[#0363CA]">Products</a>
+            <a href="#" className="hover:text-[#0363CA]">About Us</a>
+            <a href="#" className="hover:text-[#0363CA]">Blog</a>
+          </div>
+
+          <div className="relative flex items-center border border-gray-300 rounded-md px-3 ml-4">
+            <input
+              type="text"
+              placeholder="Search Products"
+              className="outline-none text-sm px-1 md:px-4 w-full lg:w-[416px] h-12 font-exo"
+            />
+            <button className="absolute right-0 flex items-center justify-center bg-[#0487E2] h-12 w-12 rounded-r-md text-white cursor-pointer">
+              <FaSearch />
             </button>
+          </div>
 
-            <div className="hidden md:flex md:gap-4 lg:gap-8 items-center text-[#263746] text-sm font-exo">
-                <a href="#" className="hover:text-[#0363CA]">Home</a>
-                <a href="#" className="hover:text-[#0363CA]">Shop</a>
-                <a href="#" className="hover:text-[#0363CA]">Products</a>
-                <a href="#" className="hover:text-[#0363CA]">About Us</a>
-                <a href="#" className="hover:text-[#0363CA]">Blog</a>
-            </div>
-
-          
-            <div className="relative flex items-center border border-gray-300 rounded-md px-3">
-                    <input
-                        type="text"
-                        placeholder="Search Products"
-                        className="outline-none text-sm px-4 w-full lg:w-[416px] h-12 font-exo"
-                    />
-                    <button className="absolute right-0 flex items-center justify-center bg-[#0487E2] h-12 w-12 rounded-r-md text-white cursor-pointer">
-                        <FaSearch />
-                    </button>
-            </div>
-        </div>
 
         <div className="hidden md:flex items-center gap-6 text-[#0487E2]">
           <FaShoppingCart className="w-6 h-6 cursor-pointer" />
@@ -74,14 +75,10 @@ const Header = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="bg-white w-full h-screen flex flex-col gap-10 p-5 font-exo text-[#263746] ">
-          
-          <div className="flex items-center justify-around p-5 border-b-2">
-            <Image src={logo} alt="Company Logo" width={173} height={50} />
-            <div className="flex gap-3 text-[#0487E2]">
+          <div className="flex gap-3 items-center justify-evenly text-[#0487E2] border-b-2 pb-4">
                 <FaShoppingCart className="w-6 h-6" />
                 <LuUser2 className="w-6 h-6" />
             </div>
-          </div>
           <div className="flex flex-col gap-6 items-center justify-center ">
             <a href="#" className="text-lg hover:text-[#0363CA] font-semibold ">Home</a>
             <a href="#" className="text-lg hover:text-[#0363CA] font-semibold">Shop</a>

@@ -35,7 +35,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 pt-5 relative">
+    <div className="container mx-auto pt-5 relative">
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index} className="flex justify-center">
