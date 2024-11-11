@@ -11,6 +11,7 @@ import img4 from '../../app/assets/image (4).png';
 import img5 from '../../app/assets/image (5).png';
 import img6 from '../../app/assets/image (6).png';
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
+import { StaticImageData } from 'next/image';
 
 const products = [
   {
@@ -45,7 +46,7 @@ const products = [
   },
 ];
 
-const ProductCard = ({ image, title, price }: { image: string; title: string; price: string }) => (
+const ProductCard = ({ image, title, price }: { image: string | StaticImageData; title: string; price: string }) => (
   <div className="bg-white flex flex-col items-center justify-between p-3 h-[378px] w-[240px] mx-2">
     <Image src={image} alt={title} width={200} height={200} />
     <div className="space-y-1">

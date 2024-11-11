@@ -5,8 +5,7 @@
 To get started with this project, follow the instructions below to install dependencies and run the project:
 
 ### 1. Clone the repository:
-``bash
-git clone https://github.com/raj-hawlader/Purle-Dice
+`git clone https://github.com/raj-hawlader/Purple-Dice`
 
 ### 2. Navigate to the project directory:
 `cd purple-dice`
