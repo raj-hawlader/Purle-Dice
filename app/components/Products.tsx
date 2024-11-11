@@ -100,7 +100,7 @@ const Products = () => {
         <div className="overflow-hidden">
           <Slider ref={sliderRef} {...settings}>
             {products.map((product, index) => (
-              <ProductCard key={index} image={product.image} title={product.title} price={product.price} />
+              <ProductCard key={index} image={typeof product.image === 'string' ? product.image : product.image.src} title={product.title} price={product.price} />
             ))}
           </Slider>
         </div>
