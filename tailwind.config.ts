@@ -12,8 +12,8 @@ export default {
         'custom-bg': 'rgba(38, 55, 70, 0.05)',
       },
       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-        exo: ['Exo', 'sans-serif'],
+        inter: ["var(--font-inter)", "sans-serif"],
+        exo: ["var(--font-exo)", "sans-serif"],
       },
     },
   },

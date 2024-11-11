@@ -50,9 +50,9 @@ const ProductCard = ({ image, title, price }: { image: string | StaticImageData;
   <div className="bg-white flex flex-col items-center justify-between p-3 h-[378px] w-[240px] mx-2">
     <Image src={image} alt={title} width={200} height={200} />
     <div className="space-y-1">
-      <h2 className="text-[#0487E2] text-center font-exo font-semibold text-base">{title}</h2>
+      <h2 className="text-[#262626] text-center font-exo font-semibold text-base">{title}</h2>
       <p className="text-[#0487E2] text-xl text-center font-exo">{price}</p>
-      <button className="bg-[#0487E2] py-3 w-[216px] text-sm text-white rounded-sm font-bold hover:bg-[#226dc4]">
+      <button className="bg-[#0487E2] py-3 w-[216px] text-sm font-exo text-white rounded-sm font-semibold hover:bg-[#226dc4]">
         Add to Cart
       </button>
     </div>
