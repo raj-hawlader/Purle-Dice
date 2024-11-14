@@ -58,7 +58,7 @@ const Header = () => {
             <input
               type="text"
               placeholder="Search Products"
-              className="outline-none text-sm px-1 md:px-4 w-full lg:w-[416px] h-12 font-exo"
+              className="outline-none text-xs md:text-sm px-1 md:px-4 w-full lg:w-[416px] h-12 font-exo"
             />
             <button className="absolute right-0 flex items-center justify-center bg-[#0487E2] h-12 w-12 rounded-r-md text-white cursor-pointer">
               <FaSearch />
