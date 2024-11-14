@@ -50,8 +50,8 @@ const ProductCard = ({ image, title, price }: { image: string | StaticImageData;
   <div className="bg-white flex flex-col items-center justify-between p-3 h-[378px] w-[240px] mx-2">
     <Image src={image} alt={title} width={200} height={200} />
     <div className="space-y-1">
-      <h2 className="text-[#262626] text-center font-exo font-semibold text-base">{title}</h2>
-      <p className="text-[#0487E2] text-xl text-center font-exo">{price}</p>
+      <h2 className="text-[#262626] text-center font-exo font-semibold text-sm md:text-base">{title}</h2>
+      <p className="text-[#0487E2] text-lg md:text-xl text-center font-exo">{price}</p>
       <button className="bg-[#0487E2] py-3 w-[216px] text-sm font-exo text-white rounded-sm font-semibold hover:bg-[#226dc4]">
         Add to Cart
       </button>
@@ -80,19 +80,19 @@ const Products = () => {
       <div className="container mx-auto max-w-[1440px] bg-custom-bg flex flex-col justify-center gap-12 h-[548px] px-5 md:px-[38px]">
 
         <div className="flex items-center justify-between">
-          <h2 className="text-2xl text-[#0487E2] font-bold">Featured Products</h2>
+          <h2 className="text-xl md:text-2xl text-[#0487E2] font-semibold font-exo">Featured Products</h2>
           
           <div className="flex gap-4">
             <button
               className="text-[#BEBEBE] p-2 rounded-full hover:text-[#0487E2]"
               onClick={() => sliderRef.current?.slickPrev()}>
-              <FaChevronLeft className="text-xl" />
+              <FaChevronLeft className="text-lg md:text-xl" />
             </button>
             
             <button
               className="text-[#BEBEBE] p-2 rounded-full hover:text-[#0487E2]"
               onClick={() => sliderRef.current?.slickNext()}>
-              <FaChevronRight className="text-xl" />
+              <FaChevronRight className="text-lg md:text-xl" />
             </button>
           </div>
         </div>
