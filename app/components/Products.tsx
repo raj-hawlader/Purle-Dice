@@ -9,7 +9,6 @@ import img2 from '../../app/assets/image (3).png';
 import img3 from '../../app/assets/image (9).png';
 import img4 from '../../app/assets/image (4).png';
 import img5 from '../../app/assets/image (5).png';
-import img6 from '../../app/assets/image (6).png';
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 import { StaticImageData } from 'next/image';
 
