@@ -1,6 +1,6 @@
 # Purple Dice Project
 
-## Setup Instructions
+# Setup Instructions
 
 To get started with this project, follow the instructions below to install dependencies and run the project:
 
