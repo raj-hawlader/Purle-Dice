@@ -4,7 +4,7 @@
 
 To get started with this project, follow the instructions below to install dependencies and run the project:
 
-### 1. Clone the repository:
+## 1. Clone the repository:
 `git clone https://github.com/raj-hawlader/Purple-Dice`
 
 ### 2. Navigate to the project directory:
