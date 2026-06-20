@@ -7,7 +7,7 @@ To get started with this project, follow the instructions below to install depen
 ## 1. Clone the repository:
 `git clone https://github.com/raj-hawlader/Purple-Dice`
 
-### 2. Navigate to the project directory:
+## 2. Navigate to the project directory:
 `cd purple-dice`
 
 ### 3. Install dependencies:
