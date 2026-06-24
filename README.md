@@ -1,4 +1,4 @@
-# Purple Dice Project
+## Purple Dice Project
 
 # Setup Instructions
 
